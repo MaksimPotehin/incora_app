@@ -36,5 +36,9 @@ a{
   transition: 0.2s;
 }
 a:hover{
-  color: black;
+  background-color: #4c4c4c;
+  color: white;
+}
+table{
+  margin: 0 auto;
 }
