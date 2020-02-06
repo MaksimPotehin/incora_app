@@ -1,0 +1,31 @@
+.users{
+    padding:100px 50px;
+}
+.test_wrap{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.test_wrap div{
+    cursor: pointer;
+}
+.test_wrap button{
+    background-color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.test_wrap button:hover{
+    background-color: #fcfcfc;
+}
+th{
+    padding: 10px;
+}
+td{
+    padding: 5px;
+}
