@@ -58,7 +58,6 @@ function mapStateToProps(state) {
     return{
         post: state.post.post,
         comments: state.post.comments,
-        activePost: state.post.activePost
     }
 }
 

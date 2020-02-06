@@ -14,7 +14,6 @@ class Users extends Component {
 
     render() {
         const {users} = this.props;
-        console.log('props', users? users:'err');
         return(
             <div className='users'>
                 {!users ?

@@ -7,8 +7,8 @@ export function getFullInfo(id) {
         try {
             const response = await axios.get(`posts/${id}`)
             const responseComments = await axios.get(`comments?postId=${id}`)
-            console.log('response', response.data)
 
+            console.log('response', response)
             dispatch(renderPost(response.data, responseComments.data))
         }
         catch (e) {
@@ -20,6 +20,9 @@ export function deletedPost(id) {
     return async dispatch => {
         try {
             await axios.delete(`posts/${id}`)
+            const response = await axios.get('posts')
+
+            console.log('AFTER_DELETE', response)
         }
         catch (e) {
             dispatch(getPostsError(e))

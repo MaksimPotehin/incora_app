@@ -1,10 +1,12 @@
 import {
+    CREATE_NEW_POST,
     GET_USERS_ERROR, HANDLE_POPUP, RENDER_POSTS,
 } from "../actions/actionTypes";
 
 const initialState = {
     posts:[],
-    isPopupOpen:false
+    isPopupOpen:false,
+    newPost:'q'
 };
 
 export default function posts (state = initialState, action){
@@ -20,6 +22,10 @@ export default function posts (state = initialState, action){
         case HANDLE_POPUP:
             return {
                 ...state, isPopupOpen: !state.isPopupOpen
+            };
+        case CREATE_NEW_POST:
+            return {
+                ...state, newPost: action.newPost
             };
         default:
             return state

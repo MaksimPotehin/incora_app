@@ -1,4 +1,4 @@
-import {GET_USERS_ERROR, HANDLE_POPUP, RENDER_POSTS} from "./actionTypes";
+import {CREATE_NEW_POST, GET_USERS_ERROR, HANDLE_POPUP, RENDER_POSTS} from "./actionTypes";
 import axios from "../../axios/axios-app";
 
 
@@ -10,6 +10,19 @@ export function getPosts(id) {
         } catch (e) {
             dispatch(getPostsError(e))
         }
+    }
+}
+export function createNewPost(newPost) {
+    return{
+        newPost,
+        type: CREATE_NEW_POST
+    }
+}
+export function sendNewPost() {
+    return async (dispatch, getState) => {
+        await axios.post('posts', getState().newPost);
+        console.log('getState', getState().posts.newPost);
+        dispatch(handlePopup())
     }
 }
 export function getPostsError(e) {
