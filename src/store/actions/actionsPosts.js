@@ -23,6 +23,8 @@ export function sendNewPost() {
         await axios.post('posts', getState().newPost);
         console.log('getState', getState().posts.newPost);
         dispatch(handlePopup())
+        let postsARR = await axios.get('posts');
+        console.log('postsARR', postsARR);
     }
 }
 export function getPostsError(e) {

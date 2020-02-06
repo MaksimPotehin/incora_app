@@ -29,6 +29,7 @@ class Posts extends Component {
                     <div>
                         <table >
                             <tbody>
+                            <th><h3>Title</h3></th><th><h3>Body</h3></th>
                             {posts.map((item, idx) =>
                                 <tr key={idx}>
                                     <td>{item.title}</td><td>{item.body}</td><td><Link to={'/posts/'+ path +'/'+item.id}>Details</Link></td>

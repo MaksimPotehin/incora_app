@@ -6,7 +6,7 @@ import {
 const initialState = {
     posts:[],
     isPopupOpen:false,
-    newPost:'q'
+    newPost:''
 };
 
 export default function posts (state = initialState, action){
